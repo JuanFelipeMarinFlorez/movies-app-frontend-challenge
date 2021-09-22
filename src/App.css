@@ -1,0 +1,22 @@
+
+html{
+  background-color: #14274E;
+  color: #f1f6f9;
+  background-image: url(./Components/Images/moviePattern.png);
+  background-color: rgba(20, 39, 78, 0.3);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed  
+
+}
+
+.body{
+  height: 100%;
+}
+
+
+.App {
+  text-align: center;
+  padding: 0px;
+}

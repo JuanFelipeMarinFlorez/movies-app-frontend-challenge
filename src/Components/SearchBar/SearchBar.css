@@ -1,0 +1,69 @@
+.SearchBarDesign{
+  justify-content: end;
+  display: grid;
+  grid-template-columns: 100%;
+  text-align: end;
+  justify-items: end;
+
+}
+
+.searchArea{
+  display: grid;
+  justify-items: end;
+  grid-template-columns: 70% 30%;
+  display: grid;
+}
+
+.text{
+  margin:0px;
+  text-align: right;
+  padding:0px;
+  width: 100%;
+}
+.searchButton{
+  border-style:solid;
+  border-radius: 15%;
+  width:auto;
+  text-align: center;
+  justify-content:center;
+  right: 0px;
+  padding: 3px;
+  color:#9BA4B4;
+ 
+  
+}
+.searchButton:hover{
+  color: #F1F6F9;
+}
+
+.textInput{
+  margin:0px;
+  width: 200px;
+}
+
+.result{
+  width:162px;
+  height: 100px;
+  background-color: #F1F6F9;
+  display: grid;
+  color: #394867;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-right: 70PX;
+  position: relative;
+}
+
+.result::-webkit-scrollbar{
+  display: none;
+}
+
+.movieName{
+
+  display: flex;
+  height: 25px;
+  font-size: 15px;
+  width:100%;
+}
+.movieName:hover{
+  background-color: #9BA4B4;
+}
