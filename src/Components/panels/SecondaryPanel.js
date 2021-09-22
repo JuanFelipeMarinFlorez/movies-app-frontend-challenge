@@ -14,6 +14,21 @@ const SecondaryPanel = () => (
       <MovieMiniPanel />
       <MovieMiniPanel />
       <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
+      <MovieMiniPanel />
     </div>
   </div>
 );

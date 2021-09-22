@@ -15,7 +15,7 @@ const Home = () => (
       <PrincipalSlide />
       <h2 className="titles">Most Popular</h2>
       <SecondaryPanel />
-      <h2 className="titles">Lastest movies</h2>
+      <h2 className="titles">Latest movies</h2>
       <SecondaryPanel />
     </div>
   </div>

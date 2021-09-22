@@ -2,7 +2,7 @@
 
 .PrincipalMovieView{
   width: auto;
-  height: 350px;
+  height: 450px;
   border-radius: 20px;
   overflow: hidden;
   overflow-x: auto;
@@ -66,8 +66,8 @@
 .MovieMiniPanel{
   margin: 5px;
   flex:1;
-  width: 15%;
-  min-width: 15%;
+  width: 10%;
+  min-width: 10%;
   height: 90%;
   border-style: solid;
   border-color: black;
