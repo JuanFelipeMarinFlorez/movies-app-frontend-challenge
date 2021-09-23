@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import './PrincipalSlide.css';
-import MoviePanel from './MoviePanel';
+/* eslint-disable linebreak-style */
 
-const PrincipalSlide = () => {
+import React from 'react';
+
+import './PrincipalSlide.css';
+import MovieMiniPanel from './MovieMiniPanel';
+
+const SecondaryPanelPopularity = () => {
   const [filterData, setFilterData] = React.useState([]);
 
   const obteinData = async () => {
-    const data = await fetch('http://3.134.101.122:8081/movies/?page=0&limit=5');
+    const data = await fetch('http://3.134.101.122:8081/movies/sortedByPopularity/?page=0');
     const movies = await data.json();
     setFilterData(movies);
   };
@@ -17,16 +20,15 @@ const PrincipalSlide = () => {
   }, []);
 
   return (
-    <div className="PrincipalMovieView">
+    <div className="secondaryMovieView">
       <div className="movieContainer">
         {filterData.map((value, key) => (
 
-          <MoviePanel title={value.originalTitle} id={value.id} key={value.id} />
+          <MovieMiniPanel title={value.originalTitle} id={value.id} key={value.id} />
 
         ))}
       </div>
     </div>
   );
 };
-
-export default PrincipalSlide;
+export default SecondaryPanelPopularity;

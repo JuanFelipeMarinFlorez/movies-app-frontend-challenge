@@ -4,7 +4,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './TopMenu.css';
-import Data from './Data.json';
 import logo from './images/popcorn.png';
 import SearchBar from '../SearchBar/SearchBar';
 
@@ -19,7 +18,7 @@ const TopMenu = () => (
         <h6 className="App-title">By Endava</h6>
       </div>
       <div>
-        <SearchBar placeholder="Enter a movie name" data={Data} />
+        <SearchBar placeholder="Enter a movie name" data={null} />
       </div>
     </div>
 

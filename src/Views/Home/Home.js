@@ -5,8 +5,9 @@ import React from 'react';
 
 import TopMenu from '../../Components/TopMenu/TopMenu';
 import PrincipalSlide from '../../Components/panels/PrincipalSlide';
-import SecondaryPanel from '../../Components/panels/SecondaryPanel';
+import SecondaryPanelPopularity from '../../Components/panels/SecondaryPanelPoluarity';
 import './Home.css';
+import SecondaryPanelLatest from '../../Components/panels/SecondaryPanelLatest';
 
 const Home = () => (
   <div className="App">
@@ -14,9 +15,9 @@ const Home = () => (
     <div className="contentCenter">
       <PrincipalSlide />
       <h2 className="titles">Most Popular</h2>
-      <SecondaryPanel />
+      <SecondaryPanelPopularity />
       <h2 className="titles">Latest movies</h2>
-      <SecondaryPanel />
+      <SecondaryPanelLatest />
     </div>
   </div>
 );

@@ -1,25 +1,38 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable max-len */
 /* eslint-disable linebreak-style */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { useHistory } from 'react-router-dom';
 import './SearchBar.css';
 
 // eslint-disable-next-line react/prop-types
 function SearchBar({ placeholder, data }) {
   const [filterData, setFilterData] = useState([]);
-  let text = null;
+  const history = useHistory();
+
+  const handleclick = () => {
+    if (document.getElementById('textInput') !== null) {
+      history.push(`/search/${document.getElementById('textInput').value}`);
+    }
+    return null;
+  };
+
   const handleFilter = (event) => {
     const searchWord = event.target.value;
-    text = searchWord;
     // eslint-disable-next-line max-len
-    const newFilter = data.filter((value) => value.name.toLowerCase().includes(searchWord.toLowerCase()));
-    if (searchWord === '') {
-      setFilterData([]);
-    } else {
-      setFilterData(newFilter);
+    if (data !== null) {
+      const newFilter = data.filter((value) => value.originalTitle.toLowerCase().includes(searchWord.toLowerCase()));
+      if (searchWord === '') {
+        setFilterData([]);
+      } else {
+        setFilterData(newFilter);
+      }
     }
   };
   return (
@@ -28,15 +41,13 @@ function SearchBar({ placeholder, data }) {
       <div className="searchArea">
         <input type="textInput" placeholder={placeholder} onChange={handleFilter} id="textInput" />
         <div className="searchButton">
-          {
-            document.getElementById('textInput') !== null ? (
-              <Link to={`/search/${document.getElementById('textInput').value}`} style={{ color: '#9BA4B4' }}>
-                <h6 className="text">Search</h6>
-              </Link>
-            ) : (
-              <h6 className="text">Search</h6>
-            )
-          }
+          <button
+            className="text"
+            type="button"
+            onClick={handleclick}
+          >
+            Search
+          </button>
 
         </div>
       </div>

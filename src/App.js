@@ -14,7 +14,7 @@ function App() {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/movieDetail/" component={MovieDetails} />
+      <Route exact path="/movieDetail/:id" component={MovieDetails} />
       <Route exact path="/search/:movieTitle" component={SearchView} />
 
       <Redirect to="/" />

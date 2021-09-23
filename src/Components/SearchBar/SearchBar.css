@@ -21,13 +21,15 @@
   width: 100%;
 }
 .searchButton{
+  display: grid;
   border-style:solid;
   border-radius: 15%;
   width:auto;
   text-align: center;
   justify-content:center;
   right: 0px;
-  padding: 3px;
+  padding: 5px;
+  margin-left: 10px;
   color:#9BA4B4;
  
   
