@@ -105,7 +105,7 @@
   margin: 5px;
   flex:1;
   width: 10%;
-  min-width: 10%;
+  min-width: 300px;
   height: 90%;
   border-radius: 15px;
   background-image: linear-gradient(

@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './PrincipalSlide.css';
 
-const ActorPanel = () => (
+const ActorPanel = ({ data }) => (
   <div className="MovieMiniPanel">
-    <h3>Actor</h3>
+    <h3>{data ? data.name : 'Actor'}</h3>
   </div>
 );
 

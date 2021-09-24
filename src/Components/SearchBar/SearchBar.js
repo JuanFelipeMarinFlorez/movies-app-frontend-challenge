@@ -16,7 +16,7 @@ function SearchBar({ placeholder }) {
   const [filterData, setFilterData] = useState([]);
   const history = useHistory();
 
-  const obteinData = async (title) => {
+  const obtainData = async (title) => {
     const searchResult = await fetch(`http://3.134.101.122:8081/movies/title/?title=${title}&page=0`);
     const movies = await searchResult.json();
     setFilterData(movies);
@@ -30,7 +30,7 @@ function SearchBar({ placeholder }) {
   };
 
   const handleFilter = (event) => {
-    obteinData(event.target.value);
+    obtainData(event.target.value);
     const searchWord = event.target.value;
     // eslint-disable-next-line max-len
     if (filterData !== null) {
