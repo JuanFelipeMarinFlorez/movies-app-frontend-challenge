@@ -1,13 +1,11 @@
-/* eslint-disable linebreak-style */
 import React from 'react';
 
 import { Link } from 'react-router-dom';
 
 import './TopMenu.css';
 import logo from './images/popcorn.png';
-import SearchBar from '../SearchBar/SearchBar';
 
-const TopMenu = () => (
+const TopMenuWithoutSearch = () => (
   <header className="menu-header">
     <div className="flex">
       <div className="name">
@@ -17,13 +15,10 @@ const TopMenu = () => (
         <h5 className="App-title">Movie App</h5>
         <h6 className="App-title">By Endava</h6>
       </div>
-      <div>
-        <SearchBar placeholder="Enter a movie name" data={null} />
-      </div>
     </div>
 
   </header>
 
 );
 
-export default TopMenu;
+export default TopMenuWithoutSearch;

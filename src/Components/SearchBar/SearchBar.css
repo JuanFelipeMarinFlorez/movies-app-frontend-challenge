@@ -21,13 +21,15 @@
   width: 100%;
 }
 .searchButton{
+  display: grid;
   border-style:solid;
   border-radius: 15%;
   width:auto;
   text-align: center;
   justify-content:center;
   right: 0px;
-  padding: 3px;
+  padding: 5px;
+  margin-left: 10px;
   color:#9BA4B4;
  
   
@@ -63,7 +65,16 @@
   height: 25px;
   font-size: 15px;
   width:100%;
+  text-align: start;
+  overflow: hidden;
 }
 .movieName:hover{
   background-color: #9BA4B4;
+   overflow:auto;
+    font-size: 11px;
+    z-index: 1;
+}
+
+.movieName::-webkit-scrollbar {
+    display: none;
 }
