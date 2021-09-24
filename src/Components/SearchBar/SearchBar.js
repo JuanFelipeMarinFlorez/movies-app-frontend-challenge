@@ -8,13 +8,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './SearchBar.css';
 
 // eslint-disable-next-line react/prop-types
-function SearchBar({ placeholder, data }) {
+function SearchBar({ placeholder }) {
   const [filterData, setFilterData] = useState([]);
   const history = useHistory();
+
+  const obteinData = async (title) => {
+    const searchResult = await fetch(`http://3.134.101.122:8081/movies/title/?title=${title}&page=0`);
+    const movies = await searchResult.json();
+    setFilterData(movies);
+  };
 
   const handleclick = () => {
     if (document.getElementById('textInput') !== null) {
@@ -24,10 +30,11 @@ function SearchBar({ placeholder, data }) {
   };
 
   const handleFilter = (event) => {
+    obteinData(event.target.value);
     const searchWord = event.target.value;
     // eslint-disable-next-line max-len
-    if (data !== null) {
-      const newFilter = data.filter((value) => value.originalTitle.toLowerCase().includes(searchWord.toLowerCase()));
+    if (filterData !== null) {
+      const newFilter = filterData.filter((value) => value.originalTitle.toLowerCase().includes(searchWord.toLowerCase()));
       if (searchWord === '') {
         setFilterData([]);
       } else {
@@ -53,10 +60,13 @@ function SearchBar({ placeholder, data }) {
       </div>
       {filterData.length !== 0 && (
         <div className="result">
-          {filterData.slice(0, 10).map((value, key) => (
-            <a className="movieName">
-              {value.name}
-            </a>
+          {filterData.slice(0, 10).map((value) => (
+            <Link to={`/movieDetail/${value.id}`} style={{ color: '#14274E', textDecoration: 'none' }} key={value.id}>
+              <a className="movieName" key={value.id}>
+                {value.originalTitle}
+              </a>
+            </Link>
+
           ))}
         </div>
       )}

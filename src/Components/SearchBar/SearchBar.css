@@ -65,7 +65,16 @@
   height: 25px;
   font-size: 15px;
   width:100%;
+  text-align: start;
+  overflow: hidden;
 }
 .movieName:hover{
   background-color: #9BA4B4;
+   overflow:auto;
+    font-size: 11px;
+    z-index: 1;
+}
+
+.movieName::-webkit-scrollbar {
+    display: none;
 }
