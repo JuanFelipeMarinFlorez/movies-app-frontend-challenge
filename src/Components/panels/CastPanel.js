@@ -16,7 +16,7 @@ const CastPanel = () => {
       <div />
     )
   )));
-
+  // https://www.themoviedb.org/t/p/
   const obtainData = async () => {
     console.log(id);
     const data = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f081f7e3f9b83f6f07044d72afe3f9df&language=en-US`);
