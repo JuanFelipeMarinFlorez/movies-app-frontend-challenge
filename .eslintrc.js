@@ -21,5 +21,8 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'linebreak-style': [0],
     'no-console': 'off',
+    indent: ['error', 2, { ignoredNodes: ['TemplateLiteral'] }],
+    'template-curly-spacing': ['error', 'never'],
+
   },
 };

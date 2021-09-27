@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { useParams } from 'react-router';
 
@@ -15,7 +16,6 @@ const CastPanel = () => {
     )
   )));
   const obtainData = async () => {
-    console.log(id);
     const data = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f081f7e3f9b83f6f07044d72afe3f9df&language=en-US`);
     const movie = await data.json();
     setMovieData(movie);
@@ -30,12 +30,12 @@ const CastPanel = () => {
         <h2 style={{ margin: '0px' }}>Cast</h2>
         <div className="movieContainer">
           {
-          movieData ? (
-            renderCast(movieData)
-          ) : (
-            <div />
-          )
-        }
+            movieData ? (
+              renderCast(movieData)
+            ) : (
+              <div />
+            )
+          }
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import './PrincipalSlide.css';
@@ -32,12 +33,12 @@ const ActorPanel = ({ data }) => {
   return (
     <>
       {
-      Image ? (
-        renderActor()
-      ) : (
-        <div />
-      )
-    }
+        Image ? (
+          renderActor()
+        ) : (
+          <div />
+        )
+      }
     </>
   );
 };

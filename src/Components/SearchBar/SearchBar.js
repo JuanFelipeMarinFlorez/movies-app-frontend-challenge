@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 
@@ -66,5 +68,3 @@ function SearchBar({ placeholder }) {
   );
 }
 export default SearchBar;
-
-// en A poner el link a info pelicula
