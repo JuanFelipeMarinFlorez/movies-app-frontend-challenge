@@ -23,6 +23,9 @@ module.exports = {
     'no-console': 'off',
     indent: ['error', 2, { ignoredNodes: ['TemplateLiteral'] }],
     'template-curly-spacing': ['error', 'never'],
+    'react/prop-types': [0],
+    'max-len': [0],
+    'import/no-extraneous-dependencies': [0],
 
   },
 };
