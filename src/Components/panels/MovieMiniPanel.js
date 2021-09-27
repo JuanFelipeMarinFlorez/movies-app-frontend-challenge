@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
-import './PrincipalSlide.css';
 import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
-// eslint-disable-next-line no-unused-vars
+import './PrincipalSlide.css';
+
 const MovieMiniPanel = ({ title, id }) => {
   const [Image, setImage] = React.useState('');
 
@@ -13,7 +11,6 @@ const MovieMiniPanel = ({ title, id }) => {
     const movieData = await data.json();
     const image = await fetch(`https://image.tmdb.org/t/p/original${movieData.poster_path}`);
     const movieImage = await image;
-    console.log(movieImage);
     setImage(movieImage);
   };
 

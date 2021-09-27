@@ -62,7 +62,6 @@ const SearchView = () => {
           <input type="checkbox" />
           Year
         </div>
-
       </div>
       <div className="contentCenter">
         <div className="secondaryMovieView">
@@ -85,16 +84,13 @@ const SearchView = () => {
                       </div>
                     </div>
                   </Link>
-
                 ))}
               </>
             )}
           </div>
         </div>
       </div>
-
     </>
-
   );
 };
 
