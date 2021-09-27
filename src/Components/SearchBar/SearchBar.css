@@ -4,6 +4,7 @@
   grid-template-columns: 100%;
   text-align: end;
   justify-items: end;
+  min-width: 100px;
 
 }
 
@@ -22,20 +23,16 @@
 }
 .searchButton{
   display: grid;
-  border-style:solid;
-  border-radius: 15%;
   width:auto;
   text-align: center;
   justify-content:center;
   right: 0px;
-  padding: 5px;
-  margin-left: 10px;
   color:#9BA4B4;
  
   
 }
 .searchButton:hover{
-  color: #F1F6F9;
+  color: #051722;
 }
 
 .textInput{

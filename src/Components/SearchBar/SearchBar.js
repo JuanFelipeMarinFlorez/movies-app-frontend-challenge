@@ -49,11 +49,11 @@ function SearchBar({ placeholder }) {
         <input type="textInput" placeholder={placeholder} onChange={handleFilter} id="textInput" />
         <div className="searchButton">
           <button
-            className="text"
+            className="searchButton"
             type="button"
             onClick={handleclick}
           >
-            Search
+            <h4 className="text">Search</h4>
           </button>
 
         </div>
