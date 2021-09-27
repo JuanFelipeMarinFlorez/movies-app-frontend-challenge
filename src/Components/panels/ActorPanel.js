@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+
 import './PrincipalSlide.css';
 
 const ActorPanel = ({ data }) => {
   const [Image, setImage] = React.useState('');
+
   const renderActor = () => (
     <div className="MovieMiniPanelBackground" style={{ backgroundImage: `url(${Image.url})` }}>
       <div className="MovieMiniPanel" style={{ alignItems: 'flex-end' }}>
@@ -30,18 +31,14 @@ const ActorPanel = ({ data }) => {
 
   return (
     <>
-
       {
-
       Image ? (
         renderActor()
       ) : (
         <div />
       )
-
     }
     </>
-
   );
 };
 

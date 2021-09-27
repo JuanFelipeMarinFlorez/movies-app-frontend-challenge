@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { useParams } from 'react-router';
 
 import TopMenu from '../../Components/TopMenu/TopMenu';
 import MovieDetailView from '../../Components/MovieDetailView/MovieDetailView';
-import './MovieDetails.css';
 import CastPanel from '../../Components/panels/CastPanel';
+
+import './MovieDetails.css';
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -20,18 +20,14 @@ const MovieDetails = () => {
   React.useEffect(() => {
     obteinData();
   }, []);
-
   return (
     <>
       <TopMenu />
       <div className="contentCenterMovie">
         <MovieDetailView data={movieData} />
         <CastPanel />
-
       </div>
-
     </>
-
   );
 };
 

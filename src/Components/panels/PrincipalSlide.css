@@ -1,5 +1,4 @@
 
-
 .PrincipalMovieView{
   width: auto;
   height: 450px;
@@ -9,7 +8,6 @@
   grid-template-columns: 100%;
   background-color: rgba(20, 39, 78, 0.3);
   align-items: center;
-
 }
 
 .secondaryMovieView{
@@ -21,7 +19,6 @@
   justify-items: center;
   background-color: rgba(20, 39, 78, 0.3);
   align-items: center;
-
 }
 
 .movieContainer{
@@ -75,7 +72,6 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size:cover; 
- 
   display: grid;
   align-items: center;
 }
@@ -102,6 +98,7 @@
   scroll-snap-align: start;
   scroll-snap-type: x proximity;
 }
+
 .MovieMiniPanelBackground{
   flex:1;
   margin: 5px;
@@ -115,7 +112,6 @@
   background-position: 50% 0;
   background-size:cover; 
 }
-
 
 .MovieMiniPanel{
   
@@ -140,7 +136,7 @@
   min-width: 100%;
   height: 90%;
   border-radius: 15px;
- background-color:rgba(20, 39, 78, 1) ;
+  background-color:rgba(20, 39, 78, 1) ;
   display: grid;
   margin: 7px;
   align-items: center;

@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable linebreak-style */
-
 import React from 'react';
 
 import './PrincipalSlide.css';
@@ -22,10 +19,8 @@ const SecondaryPanelLatest = () => {
   return (
     <div className="secondaryMovieView">
       <div className="movieContainer">
-        {filterData.map((value, key) => (
-
+        {filterData.map((value) => (
           <MovieMiniPanel title={value.originalTitle} id={value.id} key={value.id} />
-
         ))}
       </div>
     </div>

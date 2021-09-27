@@ -1,17 +1,9 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable max-len */
-/* eslint-disable linebreak-style */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+
 import { useHistory, Link } from 'react-router-dom';
 import './SearchBar.css';
 
-// eslint-disable-next-line react/prop-types
 function SearchBar({ placeholder }) {
   const [filterData, setFilterData] = useState([]);
   const history = useHistory();
@@ -32,7 +24,6 @@ function SearchBar({ placeholder }) {
   const handleFilter = (event) => {
     obtainData(event.target.value);
     const searchWord = event.target.value;
-    // eslint-disable-next-line max-len
     if (filterData !== null) {
       const newFilter = filterData.filter((value) => value.originalTitle.toLowerCase().includes(searchWord.toLowerCase()));
       if (searchWord === '') {
