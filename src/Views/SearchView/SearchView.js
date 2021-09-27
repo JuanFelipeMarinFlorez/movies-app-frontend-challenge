@@ -51,17 +51,6 @@ const SearchView = () => {
             </button>
           </div>
         </div>
-        <div>
-          <input type="checkbox" />
-          Adulto
-        </div>
-        <div>
-          sort by:
-          <input type="checkbox" />
-          Title
-          <input type="checkbox" />
-          Year
-        </div>
       </div>
       <div className="contentCenter">
         <div className="secondaryMovieView">
