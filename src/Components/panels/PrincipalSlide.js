@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import './PrincipalSlide.css';
 import MoviePanel from './MoviePanel';
@@ -19,10 +18,8 @@ const PrincipalSlide = () => {
   return (
     <div className="PrincipalMovieView">
       <div className="movieContainer">
-        {filterData.map((value, key) => (
-
+        {filterData.map((value) => (
           <MoviePanel title={value.originalTitle} id={value.id} key={value.id} />
-
         ))}
       </div>
     </div>

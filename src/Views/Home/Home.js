@@ -1,13 +1,11 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/style-prop-object */
-
 import React from 'react';
 
 import TopMenu from '../../Components/TopMenu/TopMenu';
 import PrincipalSlide from '../../Components/panels/PrincipalSlide';
 import SecondaryPanelPopularity from '../../Components/panels/SecondaryPanelPoluarity';
-import './Home.css';
 import SecondaryPanelLatest from '../../Components/panels/SecondaryPanelLatest';
+
+import './Home.css';
 
 const Home = () => (
   <div className="App">

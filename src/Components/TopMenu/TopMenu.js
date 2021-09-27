@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -15,7 +14,6 @@ const TopMenu = () => (
           <img src={logo} className="menu-logo" alt="logo" />
         </Link>
         <h5 className="App-title">Movie App</h5>
-        <h6 className="App-title">By Endava</h6>
       </div>
       <div>
         <SearchBar placeholder="Enter a movie name" data={null} />
